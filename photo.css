@@ -1,0 +1,10 @@
+img {
+  width: 30%;
+  margin: 1%;
+}
+nav {
+  text-transform: uppercase;
+  border-bottom: 2px solid gainsboro;
+  font-size: 1.2em;
+  padding: 1.2em;
+}
