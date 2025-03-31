@@ -27,53 +27,53 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-app.get("/products", async (req, res) => {
+app.get("/produce", async (req, res) => {
   const { category } = req.query;
   if (category) {
-    const products = await Product.find({ category });
-    res.render("products/index", { products, category });
+    const produce = await Product.find({ category });
+    res.render("produce/index", { produce, category });
   } else {
-    const products = await Product.find({});
-    res.render("products/index", { products, category: "All" });
+    const produce = await Product.find({});
+    res.render("produce/index", { produce, category: "All" });
   }
 });
 
-app.get("/products/new", (req, res) => {
-  res.render("products/new", { categories });
+app.get("/produce/new", (req, res) => {
+  res.render("produce/new", { categories });
 });
 
-app.post("/products", async (req, res) => {
+app.post("/produce", async (req, res) => {
   const newProduct = new Product(req.body);
   await newProduct.save();
-  res.redirect(`/products/${newProduct._id}`);
+  res.redirect(`/produce/${newProduct._id}`);
 });
 
-app.get("/products/:id", async (req, res) => {
+app.get("/produce/:id", async (req, res) => {
   const { id } = req.params;
   const product = await Product.findById(id);
-  res.render("products/show", { product });
+  res.render("produce/show", { product });
 });
 
-app.get("/products/:id/edit", async (req, res) => {
+app.get("/produce/:id/edit", async (req, res) => {
   const { id } = req.params;
   const product = await Product.findById(id);
-  res.render("products/edit", { product, categories });
+  res.render("produce/edit", { product, categories });
 });
 
-app.put("/products/:id", async (req, res) => {
+app.put("/produce/:id", async (req, res) => {
   const { id } = req.params;
   const product = await Product.findByIdAndUpdate(id, req.body, {
     runValidators: true,
   });
-  res.redirect(`/products/${product._id}`);
+  res.redirect(`/produce/${product._id}`);
 });
 
-app.delete("/products/:id", async (req, res) => {
+app.delete("/produce/:id", async (req, res) => {
   const { id } = req.params;
   const deleteProduct = await Product.findByIdAndDelete(id);
-  res.redirect("/products");
+  res.redirect("/produce");
 });
 
 app.listen(3000, () => {
-  console.log("APP IS LISTENING ON PORT 3000");
+  console.log("SERVER IS RUNNING ON PORT 3000");
 });
