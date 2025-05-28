@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webtest</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <!-- navigation bar -->
+      <header class="navbar">
+        <a href="#" class="logo">Kaytech</a>
+        <nav class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact-alt">Contact Me</a>
+        </nav>
+
+        <div class="btn-box">
+          <a href="#" class="btn-link">
+            <button class="btn-orange btn-top">Hire Me</button>
+          </a>
+          <button id="opensidebar" class="btn-sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- navigation bar -->
+      <div class="overlay" id="overlay">
+        <div class="sidebar" id="sidebar">
+          <button class="close-btn" id="closebtn">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div class="sidebar-links">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact-section">Contact Me</a>
+          </div>
+          <div class="sidebar-button">
+            <button class="btn-orange">Hire Me</button>
+          </div>
+        </div>
+      </div>
+      <!-- hero section -->
+      <main class="hero-section">
+        <div class="hero-background">
+          <div class="smoke-background"></div>
+          <div class="hero-text">
+            <p>Hi, I am</p>
+            <h2>Kayode Oloyede</h2>
+            <h1>
+              I'm a
+
+              <span
+                class="typed"
+                data-typed-items="Designer, Developer, Freelancer, Creator"
+              ></span>
+            </h1>
+            <div class="social-icons">
+              <span><i class="fa-brands fa-github"></i></span>
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-linkedin"></i></span>
+            </div>
+            <div class="hero-buttons">
+              <button class="btn-orange">Hire Me</button>
+              <button class="btn-outline">Download CV</button>
+            </div>
+            <div class="stats">
+              <div>
+                <p>5+</p>
+                <h6>Experience</h6>
+              </div>
+              <div>
+                <p>20+</p>
+                <h6>finished products</h6>
+              </div>
+              <div>
+                <p>80+</p>
+                <h6>Happy clients</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-box">
+            <img src="images/logo4.jpg" alt="hero-image" />
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- about section -->
+    <section id="about" class="about">
+      <div class="img-about">
+        <img src="images/logo4.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <!-- <span>let me introduce myself</span> -->
+        <h2>About Me</h2>
+        <p>
+          As a skilled front-end developer, I specialize in crafting visually
+          stunning and highly functional web applications that deliver
+          exceptional user experiences. With expertise in HTML, CSS, JavaScript,
+          and popular frameworks like React and Angular, I bring your digital
+          vision to life.
+        </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab(this, 'skills')">
+            Skills
+          </p>
+          <p class="tab-links" onclick="opentab(this, 'experience')">
+            Experience
+          </p>
+          <p class="tab-links" onclick="opentab(this, 'education')">
+            Education
+          </p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+            <li><span>Web Development</span><br />Web App Development</li>
+            <li>
+              <span>App Development</span><br />Building Android/ ios apps
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li>
+              <span>2024-Current</span><br />UI/UX Design Training at julie-tech
+              institute
+            </li>
+            <li>
+              <span>2025-Current</span><br />
+              Internship at julie-tech institute
+            </li>
+            <li><span>2025-Current</span><br />Lead developer</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2025</span><br />UI/UX Design Training at Julie-tech</li>
+            <li><span>2015</span><br />Bsc from AAU Nigeria.</li>
+            <li><span>2014</span><br />BBA from ISM Nigeria.</li>
+          </ul>
+        </div>
+        <!-- </div>
+      </div> -->
+      </div>
+    </section>
+    <section class="services" id="services">
+      <h1 class="heading">My Services</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fa-solid fa-code"></i>
+          <h3>Custom Web Development</h3>
+          <p>
+            I build bespoke web applications tailored to your unique needs and
+            goals.
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div class="box">
+          <i class="fa-solid fa-crop"></i>
+          <h3>UX/UI Design</h3>
+          <p>
+            I create intuitive and engaging user interfaces that drive user
+            engagement and conversion.
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div class="box">
+          <i class="fa-brands fa-app-store-ios"></i>
+          <h3>Front-end Frameworks</h3>
+          <p>
+            I leverage popular frameworks like React, Angular, and Vue.js to
+            build scalable and maintainable applications.
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="box">
+          <i class="fa-brands fa-app-store-ios"></i>
+          <h3>Front-end Frameworks</h3>
+          <p>
+            I leverage popular frameworks like React, Angular, and Vue.js to
+            build scalable and maintainable applications.
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </section>
+    <!-- experience section -->
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading">My Experience</h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="content">
+            <span>2015-2016</span>
+            <h3>Front-end Development</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Doloribus, saepe! Veritatis, porro debitis rem ratione delectus
+              voluptate dicta deserunt necessitatibus voluptatum amet esse,
+              laborum repudiandae quidem, pariatur vero totam at? Velit
+              voluptate officia reiciendis atque voluptates. In, ratione sequi
+              natus facere molestiae ut nemo molestias maiores cumque quo earum
+              architecto ipsam eos, beatae itaque veritatis dignissimos
+              doloremque quas hic rem.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <span>2017-2018</span>
+            <h3>Front-end Development</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Doloribus, saepe! Veritatis, porro debitis rem ratione delectus
+              voluptate dicta deserunt necessitatibus voluptatum amet esse,
+              laborum repudiandae quidem, pariatur vero totam at? Velit
+              voluptate officia reiciendis atque voluptates. In, ratione sequi
+              natus facere molestiae ut nemo molestias maiores cumque quo earum
+              architecto ipsam eos, beatae itaque veritatis dignissimos
+              doloremque quas hic rem.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <span>2018-2022</span>
+            <h3>Front-end Development</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Doloribus, saepe! Veritatis, porro debitis rem ratione delectus
+              voluptate dicta deserunt necessitatibus voluptatum amet esse,
+              laborum repudiandae quidem, pariatur vero totam at? Velit
+              voluptate officia reiciendis atque voluptates. In, ratione sequi
+              natus facere molestiae ut nemo molestias maiores cumque quo earum
+              architecto ipsam eos, beatae itaque veritatis dignissimos
+              doloremque quas hic rem.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <span>2022-2025</span>
+            <h3>Front-end Development</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Doloribus, saepe! Veritatis, porro debitis rem ratione delectus
+              voluptate dicta deserunt necessitatibus voluptatum amet esse,
+              laborum repudiandae quidem, pariatur vero totam at? Velit
+              voluptate officia reiciendis atque voluptates. In, ratione sequi
+              natus facere molestiae ut nemo molestias maiores cumque quo earum
+              architecto ipsam eos, beatae itaque veritatis dignissimos
+              doloremque quas hic rem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-project" id="projects-section">
+      <div class="container-fluid px-md-4">
+        <div class="row justify-content-center pb-5">
+          <div
+            class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated"
+          >
+            <span class="subheading">Accomplishments</span>
+            <h2 class="mb-4">Our Projects</h2>
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="images/work-1.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-2.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-3.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-4.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-5.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-6.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-7.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="images/work-8.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="text text-center p-4">
+              <h3><a href="#">Branding &amp; Illustration Design</a></h3>
+              <span>Web Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section without Bootstrap -->
+    <section class="ftco-section contact-form" id="contact-alt">
+      <div class="contact-container">
+        <div class="contact-heading">
+          <span class="subheading">Contact us</span>
+          <h2 class="mb-4">Have a Project?</h2>
+          <p>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form-area">
+            <form action="#" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    name="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Subject"
+                  name="subject"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Message"
+                  name="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn-orange" />
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info-area">
+            <div class="dbox">
+              <div class="icon">
+                <span><i class="fa-solid fa-location-crosshairs"></i></span>
+              </div>
+              <div class="text">
+                <p>
+                  <span>Address:</span> 1, Eghaghe Street Off Omore Rd,
+                  isiohor,benin city,Edo state,NG.
+                </p>
+              </div>
+            </div>
+            <div class="dbox">
+              <div class="icon">
+                <span> <i class="fa-solid fa-phone"></i></span>
+              </div>
+              <div class="text">
+                <p>
+                  <span>Phone:</span>
+                  <a href="tel://1234567920">+234 7067603235</a>
+                </p>
+              </div>
+            </div>
+            <div class="dbox">
+              <div class="icon">
+                <span><i class="fa-solid fa-envelope"></i></span>
+              </div>
+              <div class="text">
+                <p>
+                  <span>Email:</span>
+                  <a href="kayodeoloyed09911@gmail.com"
+                    >kayodeoloyed09911@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="dbox">
+              <div class="icon">
+                <span><i class="fa-solid fa-globe"></i></span>
+              </div>
+              <div class="text">
+                <p>
+                  <span>Website:</span>
+                  <a href="#">kaytech.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
