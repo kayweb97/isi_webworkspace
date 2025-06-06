@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitespace - Project Management Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo-icon">
+            <img src="images/Logo Icon.png" alt="" />
+          </div>
+          <span class="logo-text">whitespace</span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#" class="nav-link">Products</a>
+          <a href="#" class="nav-link">Solutions</a>
+          <a href="#" class="nav-link">Resources</a>
+          <a href="#" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn-login">Login</button>
+          <button class="btn-primary">Try Whitespace free</button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Get More Done with whitespace</h1>
+            <p class="hero-description">
+              Project management software that enables your teams to
+              collaborate, plan, analyze and manage everyday tasks
+            </p>
+            <button class="btn-primary btn-large">
+              Try Whitespace free <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="hero-image">
+            <div class="placeholder-content">
+              <img src="images/whitespace2.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Management Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-content">
+          <div class="section-text">
+            <h2 class="section-title">Project Management</h2>
+            <p class="section-description">
+              Images, videos, PDFs and audio files are supported. Create math
+              expressions and diagrams directly from the app. Take photos with
+              the mobile app and save them to a note.
+            </p>
+            <button class="btn-primary btn-large">
+              Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <!-- <div class="image-container">
+            <img src="images/whitespace3.png" alt="" />
+          </div> -->
+          <div class="hero-image">
+            <div class="placeholder-content">
+              <img src="images/second.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Together Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-content section-reverse">
+          <div class="work-image">
+            <img src="images/Work Image.png" alt="" />
+          </div>
+          <div class="section-text">
+            <h2 class="section-title">Work together</h2>
+            <p class="section-description">
+              With whitespace, share your notes with your colleagues and
+              collaborate on them. You can also publish a note to the internet
+              and share the URL with others.
+            </p>
+            <button class="btn-primary btn-large">
+              Try it now <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use as Extension Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2 class="hero-title">Use as Extension</h2>
+            <p class="hero-description">
+              Use the web clipper extension, available on Chrome and Firefox, to
+              save web pages or take screenshots as notes.
+            </p>
+            <button class="btn-primary btn-large">
+              Let's Go <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="hero-image">
+            <div class="placeholder-content">
+              <img src="images/third.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customize Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-content">
+          <div class="hero-image">
+            <div class="placeholder-content">
+              <img src="images/fourth.svg" alt="" />
+            </div>
+          </div>
+          <div class="section-text">
+            <h2 class="section-title">Customise it to your needs</h2>
+            <p class="section-description">
+              Customise the app with plugins, custom themes and multiple text
+              editors (Rich Text or Markdown). Or create your own scripts and
+              plugins using the Extension API.
+            </p>
+            <button class="btn-primary btn-large">
+              Let's Go <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title-center">Choose Your Plan</h2>
+          <p class="section-description-center">
+            Whether you want to get organized, keep your personal life on track,
+            or boost workplace productivity, Evernote has the right plan for
+            you.
+          </p>
+        </div>
+        <div class="pricing-grid">
+          <!-- Free Plan -->
+          <div class="pricing-card">
+            <div class="pricing-content">
+              <h3 class="pricing-title">Free</h3>
+              <div class="pricing-price">$0</div>
+              <p class="pricing-description">
+                Capture ideas and find them quickly
+              </p>
+              <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Sync unlimited devices</li>
+                <li><i class="fas fa-check"></i> 10 GB monthly uploads</li>
+                <li><i class="fas fa-check"></i> 200 MB max. note size</li>
+                <li><i class="fas fa-check"></i> Customize Home dashboard</li>
+              </ul>
+              <button class="btn-outline">Get Started</button>
+            </div>
+          </div>
+
+          <!-- Personal Plan -->
+          <div class="pricing-card pricing-featured">
+            <div class="pricing-content">
+              <h3 class="pricing-title">Personal</h3>
+              <div class="pricing-price pricing-price-featured">$11.99</div>
+              <p class="pricing-description">Keep home and family on track</p>
+              <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Sync unlimited devices</li>
+                <li><i class="fas fa-check"></i> 10 GB monthly uploads</li>
+                <li><i class="fas fa-check"></i> 200 MB max. note size</li>
+                <li><i class="fas fa-check"></i> Customize Home dashboard</li>
+              </ul>
+              <button class="btn-primary">Get Started</button>
+            </div>
+          </div>
+
+          <!-- Organization Plan -->
+          <div class="pricing-card">
+            <div class="pricing-content">
+              <h3 class="pricing-title">Organization</h3>
+              <div class="pricing-price">$49.99</div>
+              <p class="pricing-description">
+                Capture ideas and find them quickly
+              </p>
+              <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Sync unlimited devices</li>
+                <li><i class="fas fa-check"></i> 10 GB monthly uploads</li>
+                <li><i class="fas fa-check"></i> 200 MB max. note size</li>
+                <li><i class="fas fa-check"></i> Customize Home dashboard</li>
+              </ul>
+              <button class="btn-outline">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Your Work Everywhere Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="hero-title">Your work, everywhere you are</h2>
+          <p class="hero-description-wide">
+            Access your notes from your computer, phone or tablet by
+            synchronising with various services, including whitespace, Dropbox
+            and OneDrive. The app is available on Windows, macOS, Linux, Android
+            and iOS. A terminal app is also available!
+          </p>
+          <button class="btn-primary btn-large">
+            Try Taskey <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 100% Your Data Section -->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-content">
+          <div class="section-text">
+            <h2 class="section-title">100% your data</h2>
+            <p class="section-description">
+              The app is open source and your notes are saved to an open format,
+              so you'll always have access to them. Uses End-To-End Encryption
+              (E2EE) to secure your notes and ensure no-one but yourself can
+              access them.
+            </p>
+            <button class="btn-primary btn-large">
+              Read more <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="image-container">
+            <img src="images/whitepace4.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title-center">Our sponsors</h2>
+          <div class="sponsors-grid">
+            <div class="sponsor">
+              <img src="images/Applepace.webp" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="images/googlepace.webp" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="images/Microsoftpace.webp" alt="" />
+            </div>
+            <div class="sponsor">
+              <img src="images/Slackpace.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apps Integration Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-image">
+            <div class="placeholder-content">
+              <img src="images/whitepace6.webp" alt="" />
+            </div>
+          </div>
+          <div class="hero-text">
+            <h2 class="hero-title">
+              Work with Your Favorite Apps Using whitespace
+            </h2>
+            <p class="hero-description">
+              Whitespace teams up with your favorite software. Integrate with
+              over 1000+ apps with Zapier to have all the tools you need for
+              your project success.
+            </p>
+            <button class="btn-primary btn-large">
+              Read more <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title-center">What Our Clients Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <img src="images/whitepace7.webp" alt="" />
+              </div>
+              <p class="testimonial-text">
+                "Whitespace is designed as a collaboration tool for businesses
+                that is a full project management solution".
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img src="images/Avater1.webp" alt="" />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">Sarah Thompson, MCH</div>
+                  <div class="author-title">
+                    Head of Talent Acquisition, North America
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card testimonial-featured">
+            <div class="testimonial-content">
+              <div class="stars">
+                <img src="images/whitepace8.webp" alt="" />
+              </div>
+              <p class="testimonial-text">
+                "Whitespace is designed as a collaboration tool for businesses
+                that is a full project management solution".
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar author-avatar-featured">
+                  <img src="images/Avater2.webp" alt="" />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">Lucas Pete, MCH</div>
+                  <div class="author-title">
+                    Head of Talent Acquisition, North America
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card testimonial-featured">
+            <div class="testimonial-content">
+              <div class="stars">
+                <img src="images/whitepace8.webp" alt="" />
+              </div>
+              <p class="testimonial-text">
+                "Whitespace is designed as a collaboration tool for businesses
+                that is a full project management solution."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar author-avatar-featured">
+                  <img src="images/Avater3.webp" alt="" />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">Oberon Shaw, MCH</div>
+                  <div class="author-title">
+                    Head of Talent Acquisition, North America
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="hero-title">Try Whitespace today</h2>
+          <p class="hero-description">
+            Get started for free. Add your whole team as your needs grow.
+          </p>
+          <button class="btn-primary btn-large">
+            Try Taskey free <i class="fas fa-arrow-right"></i>
+          </button>
+          <p class="hero-description">On a big team? Contact sales</p>
+          <div class="app-buttons">
+            <span><img src="images/apple-128(1).png" alt="" /></span>
+            <span><img src="images/windows-logo-1.svg" alt="" /></span>
+            <span><img src="images/android-6-128(1).png" alt="" /></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <img src="images/Logo Icon.png" alt="" />
+              </div>
+              <span class="logo-text">whitespace</span>
+            </div>
+            <p class="footer-description">
+              whitespace was created for the new ways we live and work. We make
+              a better workspace around the world.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title">Product</h4>
+            <ul class="footer-links">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Customer stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Guides & tutorials</a></li>
+              <li><a href="#">Help center</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-title">Company</h4>
+            <ul class="footer-links">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Media kit</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3 class="footer-title">Try It Today</h3>
+            <p>Get Started for free. Add your whole team as your needs grow.</p>
+            <button class="btn-primary btn-large">Start Today</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <ul>
+          <li>
+            <img src="images/Globeicon.webp" alt="" />English
+            <i class="fa-solid fa-arrow-down"></i>
+          </li>
+          <li>Terms &amp; privacy</li>
+          <li>Security</li>
+          <li>Status</li>
+          <li>@2025 Whitespace LLC.</li>
+        </ul>
+        <div class="socials-icons">
+          <img src="images/facebook.png" alt="" />
+          <img src="images/twitter.png" alt="" />
+          <img src="images/linkedin.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="style.js"></script>
+  </body>
+</html>
