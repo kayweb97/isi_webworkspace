@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+
+  <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whitespace - Project Management Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="testimonials.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -27,11 +30,34 @@
           <span class="logo-text">whitespace</span>
         </div>
         <div class="nav-menu" id="nav-menu">
-          <a href="#" class="nav-link">Products</a>
-          <a href="#" class="nav-link">Solutions</a>
-          <a href="#" class="nav-link">Resources</a>
-          <a href="#" class="nav-link">Pricing</a>
-        </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Products</a>
+            <div class="dropdown-menu">
+              <a href="#">Product 1</a>
+              <a href="#">Product 2</a>
+              <a href="#">Product 3</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Solutions</a>
+            <div class="dropdown-menu">
+              <a href="#">Product 1</a>
+              <a href="#">Product 2</a>
+              <a href="#">Product 3</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Resources</a>
+            <div class="dropdown-menu">
+              <a href="#">Blog</a>
+              <a href="#">Guides</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Pricing</a>
+            <div class="dropdown-menu">
+            </div>
+          </div>
         <div class="nav-buttons">
           <button class="btn-login">Login</button>
           <button class="btn-primary">Try Whitespace free</button>
@@ -82,13 +108,8 @@
               Get Started <i class="fas fa-arrow-right"></i>
             </button>
           </div>
-          <!-- <div class="image-container">
-            <img src="images/whitespace3.png" alt="" />
-          </div> -->
-          <div class="hero-image">
-            <div class="placeholder-content">
-              <img src="images/second.svg" alt="" />
-            </div>
+          <div class="image-container">
+            <img src="images/about-1.png" class="move-left-right-bg" alt=""/>
           </div>
         </div>
       </div>
@@ -99,7 +120,7 @@
       <div class="container">
         <div class="section-content section-reverse">
           <div class="work-image">
-            <img src="images/Work Image.png" alt="" />
+            <img src="images/blog-1.png" alt="" class="move-float"/>
           </div>
           <div class="section-text">
             <h2 class="section-title">Work together</h2>
@@ -250,7 +271,7 @@
 
     <!-- 100% Your Data Section -->
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container">
         <div class="section-content">
           <div class="section-text">
@@ -267,6 +288,27 @@
           </div>
           <div class="image-container">
             <img src="images/whitepace4.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="section data-section">
+      <div class="container">
+        <div class="section-content side-by-side">
+          <div class="section-text">
+            <h2 class="section-title">100% your data</h2>
+            <p class="section-description">
+              The app is open source and your notes are saved to an open format,
+              so you'll always have access to them. Uses End-To-End Encryption
+              (E2EE) to secure your notes and ensure no-one but yourself can
+              access them.
+            </p>
+            <button class="btn-primary btn-large">
+              Read more <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="section-image">
+            <img src="images/hero-img-1.png" alt="background-image" class="move-float"/>
           </div>
         </div>
       </div>
@@ -322,7 +364,8 @@
     </section>
 
     <!-- Testimonials Section -->
-
+  
+<!-- 
     <section class="section">
       <div class="container">
         <div class="section-header">
@@ -343,7 +386,7 @@
                   <img src="images/Avater1.webp" alt="" />
                 </div>
                 <div class="author-info">
-                  <div class="author-name">Sarah Thompson, MCH</div>
+                  <div class="author-name">Oberon Shaw, MCH</div>
                   <div class="author-title">
                     Head of Talent Acquisition, North America
                   </div>
@@ -366,7 +409,7 @@
                   <img src="images/Avater2.webp" alt="" />
                 </div>
                 <div class="author-info">
-                  <div class="author-name">Lucas Pete, MCH</div>
+                  <div class="author-name">Oberon Shaw, MCH</div>
                   <div class="author-title">
                     Head of Talent Acquisition, North America
                   </div>
@@ -399,7 +442,47 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <section class="testimonials">
+      <div class="testimonials-container">
+          <div class="testimonials-content">
+              <div class="testimonials-header">
+                  <p class="testimonials-subtitle">TESTIMONIALS</p>
+                  <h2 class="testimonials-title">What People Say About Us.</h2>
+              </div>
+              
+              <div class="testimonial-navigation">
+                  <div class="nav-dot active" data-index="0"></div>
+                  <div class="nav-dot" data-index="1"></div>
+                  <div class="nav-dot" data-index="2"></div>
+              </div>
+          </div>
+          
+          <div class="testimonial-card">
+              <div class="testimonial-content">
+                  <div class="quote-icon">
+                      <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="testimonial-text">"Booking was a breeze! From choosing my destination to arriving at the airport, everything was smooth and stress-free. Highly recommend!"</p>
+                  
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          <img src="/placeholder.svg?height=60&width=60" alt="Mike taylor">
+                      </div>
+                      <div class="author-info">
+                          <h4>Mike taylor</h4>
+                          <p>Lahore, Pakistan</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="testimonial-nav">
+              <button class="nav-arrow prev"><i class="fas fa-chevron-up"></i></button>
+              <button class="nav-arrow next"><i class="fas fa-chevron-down"></i></button>
+          </div>
+      </div>
+  </section>
 
     <!-- Footer CTA Section -->
     <section class="hero">
@@ -488,7 +571,19 @@
         </div>
       </div>
     </footer>
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
+    <script src="testimonials.js "></script>
     <script src="style.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+

@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", function () {
       navMenu.classList.toggle("active");
-
-      // Animate hamburger
       hamburger.classList.toggle("active");
     });
 
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburger.classList.remove("active");
       });
     });
-
     // Close menu when clicking outside
     document.addEventListener("click", function (event) {
       const isClickInsideNav = navMenu.contains(event.target);
@@ -36,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -180,271 +176,6 @@ document.querySelectorAll(".pricing-card").forEach((card) => {
   });
 });
 
-//TESTIMONIAL HOVER EFFECTS
-document.querySelectorAll(".testimonial-card").forEach((card) => {
-  card.addEventListener("mouseenter", function () {
-    this.style.transform = "translateY(-3px)";
-    this.style.boxShadow = "0 8px 20px rgba(0,0,0,0.1)";
-  });
-
-  card.addEventListener("mouseleave", function () {
-    this.style.transform = "translateY(0)";
-    this.style.boxShadow = "none";
-  });
-});
-
-// Console log for debugging
-console.log("Whitespace landing page loaded successfully!");
-
-// Enhanced testimonials functionality
-function initializeEnhancedTestimonials() {
-  const testimonialCards = document.querySelectorAll(".testimonial-card");
-  const testimonialsGrid = document.querySelector(".testimonials-grid");
-
-  // Initialize intersection observer for testimonials
-  const testimonialObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }, index * 150);
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    }
-  );
-
-  // Observe all testimonial cards
-  testimonialCards.forEach((card) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(30px)";
-    card.style.transition = "all 0.6s ease";
-    testimonialObserver.observe(card);
-  });
-
-  // Add enhanced hover effects
-  testimonialCards.forEach((card, index) => {
-    // Mouse enter effect
-    card.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-8px) scale(1.02)";
-
-      // Add subtle glow effect
-      if (this.classList.contains("testimonial-featured")) {
-        this.style.boxShadow = "0 25px 50px rgba(37, 99, 235, 0.4)";
-      } else {
-        this.style.boxShadow = "0 25px 50px rgba(0, 0, 0, 0.2)";
-      }
-
-      // Animate avatar
-      const avatar = this.querySelector(".author-avatar");
-      if (avatar) {
-        avatar.style.transform = "scale(1.1) rotate(5deg)";
-      }
-    });
-
-    // Mouse leave effect
-    card.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0) scale(1)";
-
-      if (this.classList.contains("testimonial-featured")) {
-        this.style.boxShadow = "0 20px 40px rgba(37, 99, 235, 0.2)";
-      } else {
-        this.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.1)";
-      }
-
-      // Reset avatar
-      const avatar = this.querySelector(".author-avatar");
-      if (avatar) {
-        avatar.style.transform = "scale(1) rotate(0deg)";
-      }
-    });
-
-    // Click effect for testimonial cards
-    card.addEventListener("click", function () {
-      // Add click animation
-      this.style.transform = "translateY(-8px) scale(0.98)";
-
-      setTimeout(() => {
-        this.style.transform = "translateY(-8px) scale(1.02)";
-      }, 150);
-
-      // Track testimonial interaction
-      trackTestimonialInteraction(index);
-    });
-
-    // Add keyboard navigation
-    card.setAttribute("tabindex", "0");
-    card.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        this.click();
-      }
-    });
-  });
-
-  // Auto-rotate testimonials highlight
-  let currentHighlight = 0;
-  const autoRotateInterval = setInterval(() => {
-    // Remove previous highlight
-    testimonialCards.forEach((card) => {
-      card.classList.remove("auto-highlighted");
-    });
-
-    // Add highlight to current card
-    if (testimonialCards[currentHighlight]) {
-      testimonialCards[currentHighlight].classList.add("auto-highlighted");
-
-      // Scroll into view if needed
-      // testimonialCards[currentHighlight].scrollIntoView({
-      //   behavior: "smooth",
-      //   block: "nearest",
-      //   inline: "center",
-      // });
-    }
-
-    currentHighlight = (currentHighlight + 1) % testimonialCards.length;
-  }, 5000);
-
-  // Pause auto-rotation on hover
-  testimonialsGrid.addEventListener("mouseenter", () => {
-    clearInterval(autoRotateInterval);
-  });
-
-  // Add loading state simulation
-  function simulateLoading() {
-    testimonialCards.forEach((card, index) => {
-      card.classList.add("loading");
-
-      setTimeout(() => {
-        card.classList.remove("loading");
-      }, 1000 + index * 200);
-    });
-  }
-
-  // Initialize testimonials with loading effect
-  simulateLoading();
-
-  // Add testimonial sharing functionality
-  // testimonialCards.forEach((card, index) => {
-  //   const shareButton = document.createElement("button");
-  //   shareButton.className = "testimonial-share-btn";
-  //   shareButton.innerHTML = "📤";
-  //   shareButton.title = "Share this testimonial";
-  //   shareButton.style.cssText = `
-  //       position: absolute;
-  //       top: 1rem;
-  //       right: 1rem;
-  //       background: rgba(255, 255, 255, 0.9);
-  //       border: none;
-  //       border-radius: 50%;
-  //       width: 40px;
-  //       height: 40px;
-  //       cursor: pointer;
-  //       opacity: 0;
-  //       transition: all 0.3s ease;
-  //       font-size: 1rem;
-  //   `;
-
-  //   card.style.position = "relative";
-  //   card.appendChild(shareButton);
-
-  // Show share button on hover
-  // card.addEventListener("mouseenter", () => {
-  //   shareButton.style.opacity = "1";
-  // });
-
-  // card.addEventListener("mouseleave", () => {
-  //   shareButton.style.opacity = "0";
-  // });
-
-  // Share functionality
-  //     shareButton.addEventListener("click", (e) => {
-  //       e.stopPropagation();
-  //       shareTestimonial(index);
-  //     });
-  //   });
-}
-
-// Track testimonial interactions
-// function trackTestimonialInteraction(index) {
-//   const testimonialCard = document.querySelectorAll(".testimonial-card")[index];
-//   const authorName = testimonialCard.querySelector(".author-name")?.textContent;
-//   const isFeatured = testimonialCard.classList.contains("testimonial-featured");
-
-// Analytics tracking
-//   if (typeof gtag !== "undefined") {
-//     gtag("event", "testimonial_interaction", {
-//       testimonial_index: index,
-//       author_name: authorName,
-//       is_featured: isFeatured,
-//     });
-//   }
-
-//   console.log("Testimonial interaction tracked:", {
-//     index,
-//     authorName,
-//     isFeatured,
-//   });
-// }
-
-// Share testimonial functionality
-// function shareTestimonial(index) {
-//   const testimonialCard = document.querySelectorAll(".testimonial-card")[index];
-//   const testimonialText =
-//     testimonialCard.querySelector(".testimonial-text")?.textContent;
-//   const authorName = testimonialCard.querySelector(".author-name")?.textContent;
-
-//   const shareData = {
-//     title: "Customer Testimonial - Whitespace",
-//     text: `"${testimonialText}" - ${authorName}`,
-//     url: window.location.href,
-//   };
-
-// if (navigator.share) {
-//   navigator.share(shareData).catch(console.error);
-// } else {
-// Fallback: copy to clipboard
-//     const textToCopy = `${shareData.text}\n\n${shareData.url}`;
-//     navigator.clipboard
-//       .writeText(textToCopy)
-//       .then(() => {
-//         showNotification("Testimonial copied to clipboard!", "success");
-//       })
-//       .catch(() => {
-//         showNotification("Failed to copy testimonial", "error");
-//       });
-//   }
-
-//   trackTestimonialShare(index);
-// }
-
-// Track testimonial shares
-// function trackTestimonialShare(index) {
-//   if (typeof gtag !== "undefined") {
-//     gtag("event", "testimonial_share", {
-//       testimonial_index: index,
-//     });
-//   }
-// }
-
-// Add CSS for auto-highlighted testimonials
-const autoHighlightStyles = `
-  .testimonial-card.auto-highlighted {
-      transform: translateY(-5px) scale(1.02) !important;
-      box-shadow: 0 25px 50px rgba(37, 99, 235, 0.3) !important;
-      border: 2px solid #fbbf24;
-  }
-  
-  .testimonial-card.auto-highlighted:not(.testimonial-featured) {
-      box-shadow: 0 25px 50px rgba(251, 191, 36, 0.3) !important;
-  }
-`;
-
 // Inject auto-highlight styles
 const styleSheet = document.createElement("style");
 styleSheet.textContent = autoHighlightStyles;
@@ -456,38 +187,66 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Notification function (if not already defined)
-// function showNotification(message, type = "info") {
-//   const notification = document.createElement("div");
-//   notification.className = `notification notification-${type}`;
-//   notification.textContent = message;
+function showNotification(message, type = "info") {
+  const notification = document.createElement("div");
+  notification.className = `notification notification-${type}`;
+  notification.textContent = message;
 
-//   Object.assign(notification.style, {
-//     position: "fixed",
-//     top: "20px",
-//     right: "20px",
-//     padding: "1rem 1.5rem",
-//     borderRadius: "6px",
-//     color: "white",
-//     fontWeight: "500",
-//     zIndex: "9999",
-//     transform: "translateX(100%)",
-//     transition: "transform 0.3s ease",
-//     backgroundColor:
-//       type === "success" ? "#10b981" : type === "error" ? "#ef4444" : "#3b82f6",
-//   });
+  Object.assign(notification.style, {
+    position: "fixed",
+    top: "20px",
+    right: "20px",
+    padding: "1rem 1.5rem",
+    borderRadius: "6px",
+    color: "white",
+    fontWeight: "500",
+    zIndex: "9999",
+    transform: "translateX(100%)",
+    transition: "transform 0.3s ease",
+    backgroundColor:
+      type === "success" ? "#10b981" : type === "error" ? "#ef4444" : "#3b82f6",
+  });
 
-//   document.body.appendChild(notification);
+  document.body.appendChild(notification);
 
-//   setTimeout(() => {
-//     notification.style.transform = "translateX(0)";
-//   }, 100);
+  setTimeout(() => {
+    notification.style.transform = "translateX(0)";
+  }, 100);
 
-//   setTimeout(() => {
-//     notification.style.transform = "translateX(100%)";
-//     setTimeout(() => {
-//       if (document.body.contains(notification)) {
-//         document.body.removeChild(notification);
-//       }
-//     }, 300);
-//   }, 3000);
-// }
+  setTimeout(() => {
+    notification.style.transform = "translateX(100%)";
+    setTimeout(() => {
+      if (document.body.contains(notification)) {
+        document.body.removeChild(notification);
+      }
+    }, 300);
+  }, 3000);
+}
+
+// Scroll to Top Button
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+document.querySelectorAll(".nav-item > .nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    if (window.innerWidth < 1024) {
+      e.preventDefault();
+      const dropdown = this.nextElementSibling;
+      if (dropdown) dropdown.classList.toggle("show");
+    }
+  });
+});
+
